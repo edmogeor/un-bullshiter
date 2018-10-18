@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- © COPYRIGHT GEORGE EDMONDS 2018 -->
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>un-bullshiter</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.dom.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="libraries/jquery-3.3.1.min.js"></script>
+    <script src="script/frontend.js"></script>
+    <script src="script/backend.js"></script>
+
+    <script src="libraries/sum/underscore.js"></script>
+    <script src="libraries/sum/underscore.string.js"></script>
+    <script src="libraries/sum/porter-stemmer.js"></script>
+    <script src="libraries/sum/sum.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <style>
+
+    #input-container {
+      display:none;
+    }
+
+    @font-face {
+      font-family: Gotham-Light;
+      src: url("/assets/Gotham-Light.otf");
+    }
+
+    @font-face {
+      font-family: Gotham-Bold;
+      src: url("/assets/Gotham-Bold.otf");
+    }
+
+    #title {
+      color: white;
+    }
+
+    body {
+      background-color: black;
+      width: 100%;
+    }
+
+    #url-input {
+      font-family: Gotham-Light;
+      color:white;
+      background-color: inherit;
+      -webkit-border-radius: 9999px;
+      border-radius: 9999px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      outline: none;
+    }
+
+    #submit {
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      position:relative;
+    }
+
+    #triangle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    #url-input {
+      float: left;
+    }
+
+    #text-container {
+      display: none;
+    }
+
+    #text {
+      font-family: Gotham-Light;
+      color: white;
+    }
+
+    #back {
+      transform: rotate(180deg);
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+  <div id="input-container">
+  <div id="title"><span style="font-family:Gotham-Light;">un-</span><span style="font-family:Gotham-Bold;">bullshit</span><span style="font-family:Gotham-Light;">er</span></div>
+  <div id="form-container">
+  <input id="url-input" type="url" name="URL" value="http://">
+  <div id="submit"><img id="triangle" src="assets/triangle.svg"></div>
+  </div>
+  </div>
+
+  <img id="loading" src="assets/loading.svg">
+
+  <div id="text-container">
+    <div id="text"></div>
+    <img id="back" src="assets/triangle.svg">
+  </div>
+
+  </body>
+</html>
